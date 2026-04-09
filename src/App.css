@@ -1,0 +1,131 @@
+:root {
+    --dr2-roxo-principal: #8B63BC;
+    --dr2-cinza-tabela: #4E5051;
+    --dr2-fundo-escuro: #502E59;
+    --dr2-rosa-mikan: #D9A9D1;
+    
+    --dr2-texto-claro: #FFFFFF;
+    --dr2-preto: #060C0F; 
+    
+    --fonte-dr2: 'Courier New', Courier, monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    max-width: 1000px;
+    max-height: 650px;
+
+    margin: 10px;
+
+    background-color: var(--dr2-preto);
+}
+
+h1 {
+    color: var(--dr2-rosa-mikan);
+    background-color: var(--dr2-roxo-principal);
+
+    margin-bottom: 5px;
+}
+
+p{
+    color: var(--dr2-texto-claro);
+    background-color: var(--dr2-cinza-tabela);
+    margin-bottom: 5px;
+}
+
+h2, h3, a, li{
+    color: var(--dr2-texto-claro);
+    background-color: var(--dr2-roxo-principal);
+    margin-bottom: 5px;
+}
+
+figure img{ 
+    height: 100%;
+    object-fit: cover;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5px;
+    padding: 5px 0;
+
+    border-top: 5px solid var(--dr2-roxo-principal);
+    border-bottom: 5px solid var(--dr2-roxo-principal);
+}
+
+div.gosto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 5px;
+}
+div.não_gosto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 5px;
+}
+
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    background-color: var(--dr2-cinza-tabela);
+}
+
+div.minhas_contas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+div.minhas_contas a{
+    background-color: var(--dr2-cinza-tabela);
+}
+
+div.SLA{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+
+    border-bottom: 5px solid var(--dr2-roxo-principal);
+    margin-bottom: 5px;
+}
+nav ul li{
+    margin-bottom: 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    background-color: var(--dr2-cinza-tabela);
+    color: var(--dr2-texto-claro);
+    padding: 5px 0;
+    margin-bottom: 0; 
+    height: 100%;
+
+    border-bottom: 5px solid var(--dr2-preto); 
+}
+
+nav a.ativo {
+    background-color: var(--dr2-roxo-principal);
+    border-bottom: 5px solid var(--dr2-roxo-principal);
+    border-spacing: 0;
+}
+
+/*nav ul li:first-child a{
+    background-color: var(--dr2-roxo-principal);
+}*/
+
