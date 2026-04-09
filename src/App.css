@@ -80,12 +80,12 @@ ul li{
     background-color: var(--dr2-cinza-tabela);
 }
 
-div.minhas_contas {
+div.status_fisicos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
 }
-div.minhas_contas a{
+div.status_fisicos a{
     background-color: var(--dr2-cinza-tabela);
 }
 
