@@ -34,14 +34,14 @@ function ReportCard(props) {
 
     <h2>Likes</h2>
     <ul>
-        <li>{props.dados.gostos}</li>
+        <li>{props.dados.gostos.join(', ')}</li>
     </ul>
     </div>
 
     <div className="não_gosto">
     <h2>Dislikes</h2>
     <ul>
-        <li>{props.dados.naoGosta}</li>
+        <li>{props.dados.naoGosta.join(', ')}</li>
     </ul>
     </div>
 

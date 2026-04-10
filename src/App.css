@@ -143,22 +143,5 @@ div.animacao-surgir{
     animation: popIn 0.5s ease-in-out;
 }
 
-@keyframes tremorKey{
-    0%{scale: 1;}
-    25%{scale: 1.2;}
-    50%{scale: 0.8;}
-    75%{scale: 1.1;}
-    100%{scale: 1;}
-}
-
-@keyframes girar {
-    0%{rotate: 0;}
-    50%{rotate: 180deg}
-    100%{rotate: 360deg}
-}
-
-div.tremor {
-    animation: tremorKey 2s ease-in-out, girar 2s ease-in-out;
-}
 
 img{max-width: 200px;}
