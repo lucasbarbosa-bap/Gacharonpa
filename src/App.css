@@ -133,6 +133,16 @@ nav a.ativo {
 
 /* ============== ANIMAÇÕES =============== */
 
+/* Brilhos*/
+
+figure.tier-S{
+    --cor-aura: yellow;
+}
+
+figure.tier-A{
+    --cor-aura: var(--dr2-fundo-escuro);
+}
+
 /* Animações do monokuma*/
 
 @keyframes pulsar {
@@ -154,6 +164,10 @@ figure.monokuma{
     animation: pulsar 1s ease-in-out, girar 1s ease-in-out 1s forwards;
 }
 
+figure.monokuma img {
+  filter: drop-shadow(0px 0px 25px var(--cor-aura));
+}
+
 /* Card Aparecendo*/
 
 @keyframes popIn {
@@ -167,12 +181,48 @@ div.animacao-surgir{
 
 /* Brilho reluzindo no card */
 
+@keyframes brilho-corte {
+    0%{left: -100%;}
+    100%{left: 100%;}
+}
+
 div.Report_card{
     position: relative;
 }
 
 div.Report_card::after{
     position: absolute;
+    content: "";
+
+    top: 0;
+    left: -100%;
+
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(to right, transparent, rgba(255,255,255, 0.6), transparent);
+
+    transform: skewX(-20deg);
+
+    animation: brilho-corte 0.5s ease-in-out 0.5s;
 }
 
+
+/* ======= Temporarias apenas para testes ======= */
+
 img{max-width: 200px;}
+
+section{
+
+    display: flex;
+    flex-direction: column;
+}
+
+figure.Card {
+    min-height: 553px;
+    width: 100%;
+}
+
+figcaption{
+    align-self: baseline;
+}

@@ -27,8 +27,8 @@ function App() {
 
       <section>
       <h2>PARABÉNS! Seu prêmio foi: </h2>
-      <figure>
-        {rodandoGacha && (<figure className="monokuma"><img src="/img/ui/monokuma-dance.gif" alt="Sorteando puhuhu..." /></figure>)}
+      <figure className="Card">
+        {rodandoGacha && (<figure className={`monokuma tier-${personagemSorteado.tier}`}><img src="/img/ui/monokuma-dance.gif" alt="Sorteando puhuhu..." /></figure>)}
         {!rodandoGacha && personagemSorteado && <ReportCard dados={personagemSorteado}/>}
         <figcaption>
           <p>Não há garantia... A única garantia é o despair HAHAHAH!</p>
