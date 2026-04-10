@@ -1,11 +1,8 @@
-import { useState } from "react";
-import listaPersonagens from '../dados/chars.json';
-
 function ReportCard(props) {
 
     return(
     <section>
-        <div className="Report_card">
+        <div className={"Report_card animacao-surgir"}>
     <header>
         <h2>{props.dados.nome}</h2>
         <figure>
@@ -17,7 +14,7 @@ function ReportCard(props) {
                 <li><a href="pages/galeria.html">2</a></li>
                 <li><a href="pages/animes.html">3</a></li>
                 <li><a href="pages/jogos.html">4</a></li>
-                <li><a href="index.html" class="ativo">5</a></li>
+                <li><a href="index.html">5</a></li>
                 <li><a href="pages/galeria.html">6</a></li>
                 <li><figure><img src="" alt="Hope fragments funfacts" /></figure></li>
             </ul>

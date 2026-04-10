@@ -6,22 +6,30 @@ import listaPersonagens from './dados/chars.json';
 function App() {
 
   const [personagemSorteado, setPersonagemSorteado] = useState(null);
+  const [rodandoGacha, setrodandoGacha] = useState(false)
 
   function botaoGacha() {
     const numeroAleatorio = Math.floor(Math.random() * listaPersonagens.length);
     const personagem = listaPersonagens[numeroAleatorio];
+    
 
     setPersonagemSorteado(personagem);
+    setrodandoGacha(true)
+
+    setTimeout(() => {
+      setrodandoGacha(false);
+    }, 2000);
   }
   return (
-    <div className="Report_card">
+    <div className="home">
       <h1>Máquina de Gacha da Esperança</h1>
       <p> Aqui está o mais novo produto da monokuma interprises! O GACHARONPA (ou sera que dangagacha puhuhu)!</p>
 
       <section>
       <h2>PARABÉNS! Seu prêmio foi: </h2>
       <figure>
-        {personagemSorteado && <ReportCard dados={personagemSorteado}/>}
+        {rodandoGacha && (<figure><img src="/img/ui/monokuma-dance.gif" alt="Sorteando puhuhu..." /></figure>)}
+        {!rodandoGacha && personagemSorteado && <ReportCard dados={personagemSorteado}/>}
         <figcaption>
           <p>Não há garantia... A única garantia é o despair HAHAHAH!</p>
         </figcaption>
