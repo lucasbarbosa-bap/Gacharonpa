@@ -133,6 +133,28 @@ nav a.ativo {
 
 /* ============== ANIMAÇÕES =============== */
 
+/* Animações do monokuma*/
+
+@keyframes pulsar {
+    0%{scale: 1;}
+    25%{scale: 0.9;}
+    50%{scale: 1;}
+    75%{scale: 0.9;}
+    100%{scale: 1;}
+}
+
+@keyframes girar {
+    0%{translateX: 0; rotate: 0;}
+    100%{translateX: 100vw; rotate: 720deg;}
+}
+
+figure.monokuma{
+    width: max-content;
+    margin: 0 auto;
+    animation: pulsar 1s ease-in-out, girar 1s ease-in-out 1s forwards;
+}
+
+/* Card Aparecendo*/
 
 @keyframes popIn {
     0%{scale: 0;}
@@ -143,5 +165,14 @@ div.animacao-surgir{
     animation: popIn 0.5s ease-in-out;
 }
 
+/* Brilho reluzindo no card */
+
+div.Report_card{
+    position: relative;
+}
+
+div.Report_card::after{
+    position: absolute;
+}
 
 img{max-width: 200px;}
