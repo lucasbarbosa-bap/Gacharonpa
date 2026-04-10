@@ -188,6 +188,7 @@ div.animacao-surgir{
 
 div.Report_card{
     position: relative;
+    overflow: hidden;
 }
 
 div.Report_card::after{
