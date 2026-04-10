@@ -1,13 +1,13 @@
 import { useState } from "react";
 import listaPersonagens from '../dados/chars.json';
 
-function ReportCard() {
+function ReportCard(props) {
 
     return(
     <section>
         <div className="Report_card">
     <header>
-        <h2>Meu nome</h2>
+        <h2>{props.dados.nome}</h2>
         <figure>
             <img src="" alt="Hope fragments" />
         </figure>
@@ -25,36 +25,36 @@ function ReportCard() {
     </header>
 
     <div className="status_fisicos"> 
-    <h2>Height</h2><a>5'4"</a>
-    <h2>Chest</h2><a>35 in</a>
-    <h2>Weight</h2><a>125 lbs</a>
-    <h2>Blood Type</h2><a>A</a>
+    <h2>Height</h2><a>{props.dados.altura}</a>
+    <h2>Chest</h2><a>{props.dados.busto}</a>
+    <h2>Weight</h2><a>{props.dados.peso}</a>
+    <h2>Blood Type</h2><a>{props.dados.tipoSanguineo}</a>
     </div>
 
     <div className="gosto">
     <h2>Date of birth</h2>
-    <p>May 12th</p>
+    <p>{props.dados.aniversario}</p>
 
     <h2>Likes</h2>
     <ul>
-        <li>Bathrooms smells, alcohol</li>
+        <li>{props.dados.gostos}</li>
     </ul>
     </div>
 
     <div className="não_gosto">
     <h2>Dislikes</h2>
     <ul>
-        <li>Oversized Things</li>
+        <li>{props.dados.naoGosta}</li>
     </ul>
     </div>
 
     <div className="SLA">
     <h2>Special Notes</h2>
-    <p>Ultimate Nurse</p>
+    <p>{props.dados.titulo}</p>
     </div>
 
     <figure>
-        <img src="src/assets/download.jpg" alt="" />
+        <img src={props.dados.imagem} alt={ "Foto" + props.dados.nome} />
     </figure>
     </div>
     
