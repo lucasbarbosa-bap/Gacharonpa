@@ -7,9 +7,14 @@ import TelaInventario from './components/TelaInventario'
 
 function App() {
   const [abaAtiva, setAbaAtiva] = useState (null)
+  const [monocoins, setMonocoins] = useState (999)
+  const [inventario, setInventario] = useState ([])
+
 return(
   <div>
       <h1>Teste se a tela ta funcioanndo kkkkk</h1>
+      <h2>{monocoins}</h2>
+      <p>{inventario}</p>
       <nav>
         <button onClick={() => setAbaAtiva('gacha')}>Gacha</button>
         <button onClick={() => setAbaAtiva('criador')}>Criar</button>
@@ -17,9 +22,9 @@ return(
       </nav>
 
       <main>
-        {abaAtiva === "gacha" && <TelaGacha/>}
-        {abaAtiva === "criador" && <TelaCriador/>}
-        {abaAtiva === "inventario" && <TelaInventario/>}
+        {abaAtiva === "gacha" && <TelaGacha saldo={monocoins} gastar={setMonocoins} slachars={inventario} colocarchar={setInventario}/>}
+        {abaAtiva === "criador" && <TelaCriador saldo={monocoins} adicionar={setMonocoins}/>}
+        {abaAtiva === "inventario" && <TelaInventario personagens={inventario}/>}
       </main>
   </div>
 )

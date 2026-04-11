@@ -3,19 +3,27 @@ import ReportCard from './ReportCard'
 import listaPersonagens from '../dados/chars.json';
 
 
-function telaGacha() {
+function TelaGacha(props) {
 
     const [personagemSorteado, setPersonagemSorteado] = useState(null);
     const [rodandoGacha, setrodandoGacha] = useState(false)
 
-    
     function botaoGacha() {
+
+        if (props.saldo < 100) {
+        alert("UPUPUPU! Acabou o seu dinheiro! Vá trabalhar (Criar Cards)!"); /*Dps fazer um telinha de erro com o monokuma rindo seria legal...*/
+        return;}
+
+        props.gastar(props.saldo - 100) /*Tirar a merda dos monocoins, espero que afr funcione*/
+
         const numeroAleatorio = Math.floor(Math.random() * listaPersonagens.length);
         const personagem = listaPersonagens[numeroAleatorio];
+
+        props.colocarchar([...props.slachars, personagem['nome']])
         
 
         setPersonagemSorteado(personagem);
-        setrodandoGacha(true)
+        setrodandoGacha(true);
 
         setTimeout(() => {
         setrodandoGacha(false);
@@ -42,4 +50,4 @@ function telaGacha() {
         </div>
     )
 }
-  export default telaGacha;
+  export default TelaGacha;
