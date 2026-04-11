@@ -3,10 +3,10 @@ import TelaGacha from './components/TelaGacha'
 
 function App() {
 return(
-  <main>
+  <div>
       <h1>Teste se a tela ta funcioanndo kkkkk</h1>
       <TelaGacha />
-  </main>
+  </div>
 )
 }
 
