@@ -14,7 +14,6 @@ return(
   <div>
       <h1>Teste se a tela ta funcioanndo kkkkk</h1>
       <h2>{monocoins}</h2>
-      <p>{inventario}</p>
       <nav>
         <button onClick={() => setAbaAtiva('gacha')}>Gacha</button>
         <button onClick={() => setAbaAtiva('criador')}>Criar</button>

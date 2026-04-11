@@ -1,6 +1,9 @@
-function TelaInventario() {
+function TelaInventario(props) {
     return(
-        <h1>TELA INVENTARIO</h1>
+        <div>
+            <h1>TELA INVENTARIO</h1>
+            <p>{props.personagens.join(', ')}</p>
+        </div>
     )
 }
 
