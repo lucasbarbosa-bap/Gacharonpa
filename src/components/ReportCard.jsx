@@ -6,7 +6,7 @@ function ReportCard(props) {
     <header>
         <h2>{props.dados.nome}</h2>
         <figure>
-            <img src="" alt="Hope fragments" />
+            <img src="https://media.tenor.com/-gTn_5f10uUAAAAi/teto-kasane-teto.gif" alt="Hope fragments" />
         </figure>
         <nav>
             <ul>
@@ -16,7 +16,7 @@ function ReportCard(props) {
                 <li><a href="pages/jogos.html">4</a></li>
                 <li><a href="index.html">5</a></li>
                 <li><a href="pages/galeria.html">6</a></li>
-                <li><figure><img src="" alt="Hope fragments funfacts" /></figure></li>
+                <li><figure><img src="https://media.tenor.com/-gTn_5f10uUAAAAi/teto-kasane-teto.gif" alt="Hope fragments funfacts" /></figure></li>
             </ul>
         </nav>
     </header>

@@ -227,3 +227,8 @@ figure.Card {
 figcaption{
     align-self: baseline;
 }
+
+label{
+    color: var(--dr2-texto-claro);
+    background-color: var(--dr2-roxo-principal);
+}
