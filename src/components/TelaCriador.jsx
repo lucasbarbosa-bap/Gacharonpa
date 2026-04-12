@@ -12,6 +12,7 @@ function TelaCriador(props) {
     const [gostos, setGostos] = useState("")
     const [desgostos, setDesgostos] = useState("")
     const [nota, setNota] = useState("")
+    const [img, setImg] = useState(null)
 
     const [cardGerado, setCardGerado] = useState(null)
 
@@ -23,7 +24,7 @@ function TelaCriador(props) {
             "id": 99,
             "nome": nome,
             "tier": "S",
-            "imagem": "",
+            "imagem": img,
             "altura": altura,
             "peso": peso,
             "busto": busto,
@@ -60,7 +61,8 @@ function TelaCriador(props) {
             <input type="text" value={desgostos} placeholder='Desgostos...' onChange={(e) => setDesgostos(e.target.value)} />
 
             <input type="text" value={nota} placeholder='Ultimate Talent...' onChange={(e) => setNota(e.target.value)} />
-            
+
+            <input type="file" onChange={(e) => setImg(URL.createObjectURL(e.target.files[0]))} />
             
             <button onClick={criarCard}>Criar!</button>
 
